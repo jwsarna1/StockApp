@@ -10,7 +10,7 @@ import org.json.JSONObject;
 
 public class StockQuote {
     private JSONObject stock;
-    private JSONObject quote;
+    public JSONObject quote;
     public StockQuote(JSONObject stock) {
         this.stock = stock;
 
@@ -43,30 +43,30 @@ public class StockQuote {
     }
 
     public String GetChangePercent() throws JSONException {
-        return (String)this.quote.get("change_percentage");
+        return Double.toString((Double)this.quote.get("change_percentage"));
     }
 
     public String GetOpenPrice() throws JSONException {
-        return (String)this.quote.get("open");
+        return Double.toString((Double)this.quote.get("open"));
     }
 
     public String GetHighPrice() throws JSONException {
-        return (String)this.quote.get("high");
+        return Double.toString((Double)this.quote.get("high"));
     }
 
     public String GetLowPrice() throws JSONException {
-        return (String)this.quote.get("low");
+        return Double.toString((Double)this.quote.get("low"));
     }
 
     public String GetClosePrice() throws JSONException {
-        return (String)this.quote.get("close");
+        return Double.toString((Double)this.quote.get("close"));
     }
 
     public String GetBidPrice() throws JSONException {
-        return (String)this.quote.get("bid");
+        return Double.toString((Double)this.quote.get("bid"));
     }
 
     public String GetAskPrice() throws JSONException {
-        return (String)this.quote.get("ask");
+        return Double.toString((Double)this.quote.get("ask"));
     }
 }
